@@ -28,4 +28,21 @@ test("addOne function", function(assert) {
   );
 });
 
+test("API call returns an object", function(assert) {
+  var result = typeof gitCall();
+  var expected = typeof {};
+  assert.equal(result, expected, "API call should return an object"); 
+});
+
+test("API call should return status 200", function(assert){
+  var result = xhr.status;
+  var expected = 200;
+  assert.equal(result, expected, "Status code should return as 200");
+
+})
+
+
+
+
+
 // add your own tests here using QUnit!
